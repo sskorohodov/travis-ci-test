@@ -1,6 +1,6 @@
 language: clojure
 after_success:
-- git@github.com:sskorokhodov/travis-ci-clone-test.git
+- git clone git@github.com:sskorokhodov/travis-ci-clone-test.git
 - n=`grep -oE '\d+' travis-ci-clone-test/count.txt | head -1`; echo $(($n + 1)) > travis-ci-clone-test/count.txt
 - git add travis-ci-clone-test/count.txt
 - git commit -m "inc count"
